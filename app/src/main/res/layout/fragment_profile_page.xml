@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragment.ProfilePage">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/fondos"
+            android:layout_width="411dp"
+            android:layout_height="891dp"
+            app:srcCompat="@mipmap/pantallabicolor"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp" />
+
+        <ImageButton
+            android:id="@+id/sendhome"
+            android:layout_width="53dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#FFFFFF"
+            android:rotation="180"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.953"
+            app:srcCompat="@mipmap/flechair" />
+
+        <TextView
+            android:id="@+id/saludoprofile"
+            android:layout_width="126dp"
+            android:layout_height="44dp"
+            android:text="@string/mi_perfil"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.09" />
+
+        <TextView
+            android:id="@+id/nombreprofile"
+            android:layout_width="141dp"
+            android:layout_height="35dp"
+            android:text="@string/pamela_alkemy"
+            android:textAlignment="center"
+            android:textColor="#CFB6B6"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.262" />
+
+        <LinearLayout
+            android:id="@+id/contenedorprofile"
+            android:layout_width="349dp"
+            android:layout_height="425dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/fondos"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/fondos"
+            app:layout_constraintVertical_bias="0.755">
+
+            <Button
+                android:id="@+id/informacion"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:backgroundTint="#BBB0E1"
+                android:drawableLeft="@mipmap/profile_icon"
+                android:drawableRight="@mipmap/arrow_icon"
+                android:text="@string/mi_informacion" />
+
+            <Button
+                android:id="@+id/tarjetas"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:backgroundTint="#BBB0E1"
+                android:drawableLeft="@mipmap/card_icon"
+                android:drawableRight="@mipmap/arrow_icon"
+                android:text="@string/mis_tarjetas" />
+
+            <Button
+                android:id="@+id/opciones"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:backgroundTint="#BBB0E1"
+                android:drawableLeft="@mipmap/settings_icon"
+                android:drawableRight="@mipmap/arrow_icon"
+                android:text="@string/opciones" />
+
+            <Button
+                android:id="@+id/ayuda"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:backgroundTint="#BBB0E1"
+                android:drawableLeft="@mipmap/help_icon"
+                android:drawableRight="@mipmap/arrow_icon"
+                android:text="@string/centro_de_ayuda" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/fotoprofile"
+            android:layout_width="98dp"
+            android:layout_height="93dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.152"
+            app:srcCompat="@mipmap/usuario" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.883"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.09"
+            app:srcCompat="@mipmap/pencil" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

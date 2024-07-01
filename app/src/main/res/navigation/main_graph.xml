@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/splash">
+
+    <fragment
+        android:id="@+id/loginPageFragment"
+        android:name="com.example.billeteramodulo4.view.fragment.LoginPage"
+        android:label="fragment_login_page"
+        tools:layout="@layout/fragment_login_page">
+        <action
+            android:id="@+id/action_loginPageFragment_to_singupPageFragment"
+            app:destination="@id/singupPageFragment" />
+        <action
+            android:id="@+id/action_loginPageFragment_to_homePageEmptyCase"
+            app:destination="@id/homePageEmptyCase" />
+    </fragment>
+    <fragment
+        android:id="@+id/singupPageFragment"
+        android:name="com.example.billeteramodulo4.view.fragment.SingupPage"
+        android:label="fragment_singup_page"
+        tools:layout="@layout/fragment_singup_page">
+        <action
+            android:id="@+id/action_singupPageFragment_to_loginPageFragment"
+            app:destination="@id/loginPageFragment" />
+        <action
+            android:id="@+id/action_singupPageFragment_to_homePageEmptyCase"
+            app:destination="@id/homePageEmptyCase" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.billeteramodulo4.view.fragment.Welcome"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_singupPageFragment"
+            app:destination="@id/singupPageFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_loginPageFragment"
+            app:destination="@id/loginPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splash"
+        android:name="com.example.billeteramodulo4.view.fragment.Splash"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splash_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homePage"
+        android:name="com.example.billeteramodulo4.view.fragment.HomePage"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page">
+        <action
+            android:id="@+id/action_homePage_to_sendMoney"
+            app:destination="@id/sendMoney" />
+        <action
+            android:id="@+id/action_homePage_to_requestMoney"
+            app:destination="@id/requestMoney" />
+        <action
+            android:id="@+id/action_homePage_to_profilePage"
+            app:destination="@id/profilePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/sendMoney"
+        android:name="com.example.billeteramodulo4.view.fragment.SendMoney"
+        android:label="SendMoney">
+        <action
+            android:id="@+id/action_sendMoney_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/requestMoney"
+        android:name="com.example.billeteramodulo4.view.fragment.RequestMoney"
+        android:label="RequestMoney">
+        <action
+            android:id="@+id/action_requestMoney_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/homePageEmptyCase"
+        android:name="com.example.billeteramodulo4.view.fragment.HomePageEmptyCase"
+        android:label="fragment_home_page_empty_case"
+        tools:layout="@layout/fragment_home_page_empty_case">
+        <action
+            android:id="@+id/action_homePageEmptyCase_to_sendMoney"
+            app:destination="@id/sendMoney" />
+        <action
+            android:id="@+id/action_homePageEmptyCase_to_requestMoney"
+            app:destination="@id/requestMoney" />
+        <action
+            android:id="@+id/action_homePageEmptyCase_to_profilePage"
+            app:destination="@id/profilePage" />
+        <action
+            android:id="@+id/action_homePageEmptyCase_to_splash"
+            app:destination="@id/splash" />
+    </fragment>
+    <fragment
+        android:id="@+id/profilePage"
+        android:name="com.example.billeteramodulo4.view.fragment.ProfilePage"
+        android:label="fragment_profile_page"
+        tools:layout="@layout/fragment_profile_page">
+        <action
+            android:id="@+id/action_profilePage_to_splash"
+            app:destination="@id/splash" />
+    </fragment>
+</navigation>

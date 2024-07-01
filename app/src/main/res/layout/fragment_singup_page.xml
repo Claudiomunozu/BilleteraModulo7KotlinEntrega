@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragment.SingupPage">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="411dp"
+            android:layout_height="891dp"
+            app:srcCompat="@mipmap/fondo"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp" />
+
+        <ImageView
+            android:id="@+id/fondologin"
+            android:layout_width="337dp"
+            android:layout_height="578dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.083"
+            app:srcCompat="@mipmap/flechafondo" />
+
+        <TextView
+            android:id="@+id/yatienescuentasinguppage"
+            android:layout_width="222dp"
+            android:layout_height="35dp"
+            android:text="@string/ya_tienes_una_cuenta"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.913" />
+
+        <Button
+            android:id="@+id/crearcuenta"
+            android:layout_width="339dp"
+            android:layout_height="46dp"
+            android:backgroundTint="#631C9A"
+            android:text="@string/crear_cuenta"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.848" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="323dp"
+            android:layout_height="93dp"
+            android:text="@string/registrarse_y_empezar_a_transferir"
+            android:textAlignment="textStart"
+            android:textColor="#CFB6B6"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.166" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="323dp"
+            android:layout_height="330dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.343">
+
+            <EditText
+                android:id="@+id/etNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/ingresar_nombre"
+                android:inputType="text"
+                android:textColorHint="#CFB6B6"
+                android:textColor="@color/white"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/etApellido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/ingresar_apellido"
+                android:inputType="text"
+                android:textColorHint="#CFB6B6"
+                android:textColor="@color/white"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/ingresar_correo"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#CFB6B6"
+                android:textColor="@color/white"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:drawableRight="@mipmap/ic_launcher_foreground"
+                android:ems="10"
+                android:hint="@string/ingresar_contrase_a"
+                android:inputType="textPassword"
+                android:textColorHint="#CFB6B6"
+                android:textColor="@color/white"
+                android:textStyle="italic"
+                tools:visibility="visible" />
+
+            <EditText
+                android:id="@+id/etPassword2"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:drawableRight="@mipmap/ic_launcher_foreground"
+                android:ems="10"
+                android:hint="@string/reingresar_contrase_a"
+                android:inputType="textPassword"
+                android:textColorHint="#CFB6B6"
+                android:textColor="@color/white"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

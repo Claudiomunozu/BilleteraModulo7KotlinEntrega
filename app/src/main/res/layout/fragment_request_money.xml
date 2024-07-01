@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ExtraText">
+    tools:context=".RequestMoney">
+
+    <ImageView
+        android:id="@+id/layoutRequestMoney"
+        android:layout_width="411dp"
+        android:layout_height="891dp"
+        app:layout_anchor="@+id/constraintLayout"
+        app:layout_anchorGravity="center"
+        app:srcCompat="@mipmap/fondo" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#6543A1"
+            android:visibility="visible"
+            app:navigationIcon="?attr/homeAsUpIndicator"
+            app:navigationIconTint="@color/white" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/ingresarDineroRequestMoney"
+            android:layout_width="211dp"
+            android:layout_height="43dp"
+            android:text="@string/ingresar_dinero"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.083" />
+
+        <TableLayout
+            android:id="@+id/tlRequestMoney"
+            android:layout_width="364dp"
+            android:layout_height="78dp"
+            android:layout_marginBottom="292dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ingresarDineroRequestMoney"
+            app:layout_constraintVertical_bias="0.129">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/photoRequestMoney"
+                    android:layout_width="103dp"
+                    android:layout_height="match_parent"
+                    android:textAlignment="viewStart"
+                    app:srcCompat="@mipmap/personaenvio" />
+
+                <LinearLayout
+                    android:layout_width="238dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/contactRequestMoney"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tania_rojas"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/emailRequestMoney"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tania_rojas_gmail_com"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+            </TableRow>
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/tvRequestMoney"
+            android:layout_width="369dp"
+            android:layout_height="67dp"
+            android:text="@string/cantidad_a_ingresar"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tlRequestMoney"
+            app:layout_constraintVertical_bias="0.039" />
+
+        <EditText
+            android:id="@+id/etDineroRequestMoney"
+            android:layout_width="369dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="472dp"
+            android:hint="$"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.476"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivNoteRequestMoney"
+            android:layout_width="369dp"
+            android:layout_height="250dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etDineroRequestMoney"
+            app:layout_constraintVertical_bias="0.266"
+            app:srcCompat="@mipmap/rectangle" />
+
+        <TextView
+            android:id="@+id/tvNotasRequestMoney"
+            android:layout_width="369dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/notas_de_transferencia"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/tvNotaRequestMoney"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etDineroRequestMoney" />
+
+        <EditText
+            android:id="@+id/tvNotaRequestMoney"
+            android:layout_width="357dp"
+            android:layout_height="197dp"
+            android:hint="@string/agregar_notas_de_transferencia_opcional"
+            android:textSize="15dp"
+            android:textAlignment="center"
+            android:textColorHint="#8654DF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivNoteRequestMoney"
+            app:layout_constraintVertical_bias="0.115" />
+
+        <Button
+            android:id="@+id/btnIngresarDineroRequestMoney"
+            android:layout_width="370dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:backgroundTint="#bc4ed8"
+            android:drawableLeft="@mipmap/recibe_icon"
+            android:text="@string/ingresar_dinero"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.893" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
